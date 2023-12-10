@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TV Series Search</title>
+</head>
+<body>
+    <script>
+        async function searchTVSeries() {
+            const show = prompt('Enter the show.');
+            const url = `https://api.tvmaze.com/singlesearch/shows?q=${encodeURIComponent(show)}`;
+
+            const response = await fetch(url);
+            const responseJSON = await response.json();
+            console.log(responseJSON);
+        }
+
+        searchTVSeries();
+    </script>
+</body>
+</html>
