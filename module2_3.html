@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>module2_3</title>
+</head>
+<body>
+<script>
+    function Dogs() {
+            const dogNames = [];
+
+            for (let i = 0; i < 6; i++) {
+                const dogName = prompt("Enter the name of dog number " + (i + 1) + ":");
+                dogNames.push(dogName);
+            }
+
+            dogNames.sort().reverse();
+
+            document.write("<h2>Dog Names</h2>");
+            document.write("<ul>");
+            for (let i = 0; i < dogNames.length; i++) {
+                document.write("<li>" + dogNames[i] + "</li>");
+            }
+            document.write("</ul>");
+        }
+
+        Dogs();
+</script>
+</body>
+</html>

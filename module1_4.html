@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>module1_4</title>
+</head>
+<body>
+<script>
+  function studentHouse(name) {
+
+    'use strict';
+    var rhouse = Math.floor(Math.random() * 4) + 1;
+
+    var house;
+    switch (rhouse) {
+      case 1:
+        house = "Gryffindor";
+        break;
+
+      case 2:
+        house = "Slytherin";
+        break;
+
+      case 3:
+        house = "Hufflepuff";
+        break;
+
+      case 4:
+        house = "Ravenclaw";
+        break;
+    }
+
+    document.write("<p>" + name + ", you are " + house + "</p>");
+  }
+
+  var name = prompt("What's your name? ");
+
+  studentHouse(name);
+</script>
+</body>
+</html>

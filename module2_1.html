@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>module2_1</title>
+</head>
+<body>
+<script>
+  'use strict';
+  function reverseArray() {
+    var narray = [];
+    for (var i = 1; i < 6; i++) {
+      var number = prompt("Enter number " + i + ":");
+      narray.push(Number(number));
+    }
+
+    console.log("Numbers in reverse order: ");
+    for (var j = narray.length - 1; j >= 0; j--) {
+      console.log(narray[j])
+    }
+  }
+
+  reverseArray()
+</script>
+</body>
+</html>

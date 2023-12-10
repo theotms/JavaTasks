@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function calculations() {
+
+            'use strict';
+            var n1 = prompt("What's the first number? ");
+            var n2 = prompt("What's the second number? ");
+            var n3 = prompt("What's the third number? ");
+            n1 = parseInt(n1);
+            n2 = parseInt(n2);
+            n3 = parseInt(n3);
+
+            var sum = n1 + n2 + n3;
+            var times = n1 * n2 * n3;
+            var average = sum/3;
+
+            document.write("<p>Sum: " + sum + "</p>");
+            document.write("<p>Product: " + times + "</p>");
+            document.write("<p>Average: " + average + "</p>");
+      }
+
+      calculations()
+    </script>
+</body>
+</html>

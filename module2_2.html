@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>module2_2</title>
+</head>
+<body>
+<script>
+    function participants() {
+      var npart = prompt("How many participants there is? ")
+      npart = parseInt(npart)
+      const partArray = [];
+
+      for (i = 0; i < npart; i++) {
+        const name = prompt("What's the name of participant number " + (i+1) + "?");
+        partArray.push(name);
+      }
+      partArray.sort();
+      document.write("<h2>Participant Names</h2>");
+      document.write("<ol>");
+      for (let i = 0; i < partArray.length; i++) {
+        document.write("<li>" + partArray[i] + "</li>");
+      }
+      document.write("</ol>")
+    }
+
+    participants()
+</script>
+</body>
+</html>
