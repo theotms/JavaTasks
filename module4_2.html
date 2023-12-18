@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>module4_2</title>
+</head>
+<body>
+<form id="searchForm" action="https://api.tvmaze.com/search/shows" onsubmit="searchSeries(event)">
+  <label for="query">Enter TV Series:</label>
+  <input id="query" name="q" type="text" required>
+  <input type="submit" value="Search">
+</form>
+<pre id="result"></pre>
+<script>
+    function searchSeries(event) {
+      event.preventDefault();
+      let query = document.getElementById("query").value;
+      fetch(`https://api.tvmaze.com/search/shows?q=${query}`)
+        .then(response => response.json())
+        .then(data => {
+          console.log(data);
+
+          let resultElement = document.getElementById("result");
+          resultElement.textContent = JSON.stringify(data, null, 2);
+        })
+        .catch(error => console.error("Error fetching data:", error));
+}
+</script>
+</body>
+</html>
